@@ -1,0 +1,172 @@
+.container {
+  margin: 50px;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(3, 33.3%);
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+input {
+  margin: 10px;
+  padding: 10px;
+  width: 290%;
+  text-align: center;
+  align-items: center;
+}
+.box {
+  width: 100%;
+  text-align: center;
+  padding: 30px;
+  justify-content: center;
+}
+#box-1,
+#box-2,
+#box-6,
+#box-7 {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+#box-1 {
+  width: auto;
+  background-color: rgb(68, 145, 245);
+}
+#box-2 {
+  width: auto;
+  background-color: rgb(68, 210, 245);
+}
+#box-3 {
+  width: auto;
+  background-color: rgb(220, 252, 231);
+}
+#box-4 {
+  width: auto;
+  background-color: rgb(212, 212, 212);
+}
+#box-5 {
+  width: auto;
+  background-color: rgb(149, 71, 145);
+  color: white;
+}
+#box-6 {
+  width: auto;
+  background-color: rgb(57, 71, 88);
+  color: white;
+}
+#box-7 {
+  width: auto;
+  background-color: rgb(213, 154, 78);
+}
+
+/* Desktop */
+@media (min-width: 1030px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "input input input"
+      "one one one"
+      "two two two"
+      "three four five"
+      "six six six" "seven seven seven";
+  }
+  #box-1 {
+    grid-area: one;
+  }
+  #box-2 {
+    grid-area: two;
+  }
+  #box-3 {
+    grid-area: three;
+  }
+  #box-4 {
+    grid-area: four;
+  }
+  #box-5 {
+    grid-area: five;
+  }
+  #box-6 {
+    grid-area: six;
+  }
+  #box-7 {
+    grid-area: seven;
+  }
+}
+
+ /* Tablet view */
+ @media (min-width: 630px) and (max-width: 1029px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto ;
+    grid-template-areas:
+      "input input"
+      "one one"
+      "two two"
+      "seven seven" "six three" "five four";
+  }
+  input{
+    width: 180%;
+  }
+  #box-1 {
+    grid-area: one;
+  }
+  #box-2 {
+    grid-area: two;
+  }
+  #box-3 {
+    grid-area: three;
+  }
+  #box-4 {
+    grid-area: four;
+  }
+  #box-5 {
+    grid-area: five;
+  }
+  #box-6 {
+    grid-area: six;
+  }
+  #box-7 {
+    grid-area: seven;
+  }
+}
+
+/* Mobile */
+@media (max-width: 629px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas:
+      "input"
+      "one"
+      "two"
+      "seven"
+      "six"
+      "three"
+      "five"
+      "four";
+  }
+  input{
+    width: 85%;
+  }
+  #box-1 {
+    grid-area: one;
+  }
+  #box-2 {
+    grid-area: two;
+  }
+  #box-3 {
+    grid-area: three;
+  }
+  #box-4 {
+    grid-area: four;
+  }
+  #box-5 {
+    grid-area: five;
+  }
+  #box-6 {
+    grid-area: six;
+  }
+  #box-7 {
+    grid-area: seven;
+  }
+}
